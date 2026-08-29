@@ -12,11 +12,12 @@ import xlsxwriter
 def gerar_dashboard_excel():
     nome_arquivo = 'TCC_Graficos_Resultados.xlsx'
     
+    # DADOS ATUALIZADOS PARA ESPELHAR EXATAMENTE A TABELA 4 DO TCC
     dados = {
         "Fase de Maturidade": ["Baseline (Legado)", "Fase 1 (Observabilidade)", "Fase 2 (Automação)", "Fase 3 (CI/CD)"],
-        "MTTR (Horas)": [336.0, 48, 24, 4.0],
-        "CFR": [0.550, 0.50, 0.180, 0.100],
-        "QD003 (Horas)": [6.5, 3.2, 2.1, 0.8],
+        "MTTR (Horas)": [336.0, 48.0, 24.0, 4.0],
+        "CFR": [0.550, 0.500, 0.180, 0.100],
+        "QD003 (Horas)": [7.9, 3.2, 2.1, 0.8],
         "IN013": [0.313, 0.280, 0.185, 0.120]
     }
     df = pd.DataFrame(dados)
