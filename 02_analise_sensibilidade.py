@@ -28,7 +28,7 @@ def executar_analise_sensibilidade():
     mttr_cons = pert_random(a=4.0, m=8.0, b=15.0, size=n_iter)
     cfr_cons = pert_random(a=8.0, m=15.0, b=22.0, size=n_iter)
     inc_cons = np.random.poisson(lam=2.0, size=n_iter)
-    in013_cons = 0.55 * cfr_cons + 6.2 + np.random.normal(0, 0.5, n_iter)
+    in013_cons = 0.55 * cfr_cons + 6.3 + np.random.normal(0, 0.5, n_iter)
     qd003_cons = (mttr_cons * inc_cons) / 9.0
 
     # 2. Cenário Moderado (Regime Padrão da Fase 3)
@@ -42,7 +42,7 @@ def executar_analise_sensibilidade():
     mttr_otim = pert_random(a=1.0, m=2.0, b=3.0, size=n_iter)
     cfr_otim = pert_random(a=2.0, m=5.0, b=8.0, size=n_iter)
     inc_otim = np.random.poisson(lam=0.5, size=n_iter)
-    in013_otim = 0.55 * cfr_otim + 7.0 + np.random.normal(0, 0.5, n_iter)
+    in013_otim = 0.55 * cfr_otim + 7.1 + np.random.normal(0, 0.5, n_iter)
     qd003_otim = (mttr_otim * inc_otim) / 2.5
 
     tabela_sensibilidade = pd.DataFrame({
